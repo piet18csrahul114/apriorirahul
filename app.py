@@ -8,11 +8,11 @@ from mlxtend.frequent_patterns import apriori, association_rules
 st.set_option('deprecation.showfileUploaderEncoding', False)
 def find_associatio_rule(support):
   # Load the pickled model
-  model = pickle.load(open('/content/drive/My Drive/apriorirahul.pkl','rb'))     
+  model = pickle.load(open('apriorirahul.pkl','rb'))     
   if uploaded_file is not None:
     dataset= pd.read_csv(uploaded_file)
   else:
-    dataset= pd.read_csv('/content/drive/My Drive/Market_Basket_Optimisation.csv')
+    dataset= pd.read_csv('Market_Basket_Optimisation.csv')
 
   #Create list 
   transactions = []
@@ -29,11 +29,11 @@ def find_associatio_rule(support):
   return rules
 def find_frequent_items(support):
   # Load the pickled model
-  model = pickle.load(open('/content/drive/My Drive/apriorirahul.pkl','rb'))     
+  model = pickle.load(open('apriorirahul.pkl','rb'))     
   if uploaded_file is not None:
     dataset= pd.read_csv(uploaded_file)
   else:
-    dataset= pd.read_csv('/content/drive/My Drive/Market_Basket_Optimisation.csv')
+    dataset= pd.read_csv('Market_Basket_Optimisation.csv')
   #Create list 
   transactions = []
   for i in range(0, 7500):
